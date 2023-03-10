@@ -7,10 +7,22 @@
     </head>
     <body>
 
-        <div class="alert-box" id="alert" style="text-align: center;">Hello World!<button id="close"style="float: right;"
-            onclick="document.getElementById('alert').style.display='none'">X</button></div>
-        <button onclick="document.getElementById('alert').style.display = 'block'">버튼</button>
+        <div class="alert-box" id="alert"><p id="world">world</p>
+            <button onclick="alertDisplay('none')">X</button></div>
+
+        <button onclick="alertDisplay('block'); alertText('아이디를 입력하세요.');">버튼1</button>
+        <button onclick="alertDisplay('block'); alertText('비밀번호를 입력하세요.');">버튼2</button>
     
-    
+        <script>
+            function alertDisplay(status) {
+                document.getElementById('alert').style.display = status;
+            }
+
+            function alertText(text) {
+                document.getElementById('world').innerHTML = text;
+            }
+
+        </script>
+
     </body>
 </html>
