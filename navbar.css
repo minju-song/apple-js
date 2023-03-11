@@ -1,7 +1,39 @@
 .list-group {
     display: none;
 }
+/* 네비게이션바 서브메뉴 안보이게 기본설정 */
 
 .show {
     display: block;
 }
+/* display속성이 block상태가 됨 */
+/* 네비게이션바 보이게 설정하는 css */
+
+.pink {
+    color: pink;
+}
+/* <p> 글자 pink로 변경하는 css */
+
+.black-bg {
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    background : rgba(0,0,0,0.5);
+    z-index : 5;
+    padding: 30px;
+    display: none;
+  }
+  /* 모달창 배경 */
+  /* display:none이 기본설정 */
+
+  .white-bg {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+  }
+  /* 모달창 디자인 */
+
+  .show2 {
+    display: block;
+}
+/* 모달창 보이게 하는 css */
