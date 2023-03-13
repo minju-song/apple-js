@@ -19,6 +19,7 @@
       </div>
     </div> 
     <!-- 모달창 디자인 -->
+    <!-- 맨 위에 적는 이유는 모달창이 맨 위에 뜨기 때문 -->
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -51,12 +52,17 @@
       <!-- p 클래스 숨기는 버튼 -->
 
       <script>
-        // navbar-toggler클래스 선택해서 addEventListener
-        document.querySelector('.navbar-toggler').addEventListener('click',function(){
-          document.querySelector('.list-group').classList.toggle('show');
-          // list-group 클래스에 show 추가 또는 삭제
-          // toggle은 있으면 삭제, 없으면 추가하는 기능
+        
+
+        $('.navbar-toggler').on('mouseover', function(){
+          $('.list-group').addClass('show');
         })
+        // navbar-toggler에 마우스 갖다대면 서브메뉴 보임
+
+        $('.navbar-toggler').on('mouseout', function(){
+          $('.list-group').removeClass('show');
+        })
+        // navbar-toggler에 마우스 나가면 서브메뉴 숨김
 
         $('.hello').html('Hello World');
         // hello 클래스 html 내용을 hello world로 변경

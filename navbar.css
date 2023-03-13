@@ -1,13 +1,16 @@
 .list-group {
-    display: none;
+    visibility: hidden;
+    height: 0px;
+    transition: all 1s;
+    overflow: hidden;
 }
-/* 네비게이션바 서브메뉴 안보이게 기본설정 */
+/* 네비게이션바 애니메이션주기 */
 
 .show {
-    display: block;
+    visibility: visible;
+    height:200px;
 }
-/* display속성이 block상태가 됨 */
-/* 네비게이션바 보이게 설정하는 css */
+/* 네비게이션바 애니메이션주기 */
 
 .pink {
     color: pink;
@@ -21,7 +24,13 @@
     background : rgba(0,0,0,0.5);
     z-index : 5;
     padding: 30px;
-    display: none;
+    /* display: none; */
+    visibility: hidden; 
+    /* UI 애니메이션줄 때 display:none효과 */
+    opacity: 0;
+    /* 투명도 */
+    transition: all 1s;
+    /* 애니메이션줄 때 1초동안 변경해달라고 요청 */
   }
   /* 모달창 배경 */
   /* display:none이 기본설정 */
@@ -34,6 +43,9 @@
   /* 모달창 디자인 */
 
   .show2 {
-    display: block;
+    visibility: visible;
+    /* UI 애니메이션줄 때 display:block과 비슷 */
+    opacity: 1;
+    /* 투명도 */
 }
 /* 모달창 보이게 하는 css */
